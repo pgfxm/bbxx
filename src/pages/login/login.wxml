@@ -1,0 +1,16 @@
+<view class="login-container">
+    <view>
+      <input bindinput="updateData" data-key="username" class="input" placeholder="邮箱 / 手机号" placeholder-class="input-placeholder" />
+    </view>
+    <view>
+      <input bindinput="updateData" data-key="password" type="password" class="input" placeholder="请输入密码" placeholder-class="input-placeholder" password="true" />
+    </view>
+    <view>
+      <button bindtap="doLogin" formType="submit" size="mini" plain="true" class="login-btn" hover-class="other-button-hover" hover-class="btn-hover"> 登 录 </button>
+    </view>
+    <view>
+      <navigator url="/pages/register/register" redirect class="register">30秒快速注册</navigator>
+    </view>
+</view>
+<import src="../../template/toast/index.wxml"/>
+<template wx:if="{{toast.show}}" is="toast" data="{{...toast}}"/>

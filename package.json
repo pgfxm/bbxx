@@ -1,0 +1,26 @@
+{
+  "name": "bbxx",
+  "description": "",
+  "author": "观发 彭 <pengguanfa@weidian.com>",
+  "scripts": {
+    "dev": "gulp",
+    "build": "gulp build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-automerge": "^1.0.6",
+    "gulp-clean": "^0.3.2",
+    "gulp-clean-css": "^2.3.2",
+    "gulp-html-minify": "0.0.14",
+    "gulp-imagemin": "^3.1.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.0.0",
+    "gulp-template": "^4.0.0",
+    "gulp-uglify": "^2.0.0",
+    "gulp-util": "^3.0.7",
+    "gulp-watch-path": "^0.1.0",
+    "gulp-autoprefixer":"^3.1.1",
+    "stream-combiner2": "^1.1.1"
+  }
+}

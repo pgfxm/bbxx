@@ -1,0 +1,100 @@
+var app = getApp();
+var toast = require('../../template/toast/index.js');
+var util = require("../../utils/util.js");
+
+Page({
+    scopeData:{
+        id:0,
+        imgs:[]
+    },
+    data : {
+        toast:{
+            show: false,
+            isMask: false,
+            content: ''
+        },
+        items:[],
+        indicatorDots: true,
+        autoplay: true,
+        interval: 5000,
+        duration: 500
+    },
+
+    onLoad: function(e){
+        var hid = e.id;
+        this.scopeData.id = hid;
+        if(!hid){
+            self.showError("参数有误");
+        }else{
+            this.getData(hid);
+        }
+    },
+
+    getData: function(hid){
+        var self = this;
+        util.request({
+            url : app.globalData.domain.request+"/wx.php?m=weapp&act=GetPhotoByHid",
+            data : {
+                hid : hid
+            },
+            success : function(res){
+                //这里需要将proxy的接口数据进行过滤 再次检测实际接口的数据
+                util.checkAjaxResult({
+                    data : res.data,
+                    success : function(rt){
+                        var data = {},
+                            title = rt.result.title,
+                            items = rt.result.items,
+                            length = items.length;
+
+                        if(length){
+                            title && wx.setNavigationBarTitle({title:title});
+                            for(var key in items){
+                                self.scopeData.imgs.push(items[key].src);
+                                self.data.items.push(items[key]);
+                            }
+                            data = {
+                                items : self.data.items,
+                                title : title
+                            };
+                            if(self.data.items.length<=1){
+                                data.indicatorDots = false;
+                            }
+                            self.setData(data);
+                        } else {
+                            self.showError("该相册不存在");
+                        }
+                    }
+                });
+            },
+            fail : function(){
+                self.showError("获取相片列表失败");
+            }
+        });
+
+    },
+    /**
+     * 设置分享
+     */
+    onShareAppMessage: function () {
+        var self = this;
+        return {
+            title: '相册详情'|| self.items[0].title,
+            desc: '美女如云，不看后悔',
+            path: '/pages/item/index?id='+self.scopeData.id
+        }
+    },
+
+    previewImage: function (e) {
+        var url = e.currentTarget.dataset.url;
+        wx.previewImage({
+            current: url,
+            urls: this.scopeData.imgs // 需要预览的图片http链接列表
+        })
+
+    },
+    showError: function(msg){
+        toast.show(this,msg);
+        wx.navigateBack();
+    }
+});

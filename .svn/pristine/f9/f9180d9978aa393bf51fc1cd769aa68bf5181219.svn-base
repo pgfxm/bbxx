@@ -1,0 +1,17 @@
+.tpl-toast{
+  @include fixed(all);
+  z-index: $zIndexPopup;
+  @include center-flex();
+}
+.tpl-toast-mask{
+  background: $colorOverlay;
+}
+.tpl-toast-text{
+  display: block;
+  padding: 25rpx 45rpx;
+  font-size: $popFontSize;
+  color: #fff;
+  line-height: $fontLineHeight;
+  background: $colorTextOverlay;
+  border-radius: $radiusBase;
+}

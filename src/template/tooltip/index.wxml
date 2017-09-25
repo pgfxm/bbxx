@@ -1,0 +1,5 @@
+<template name="tooltip">
+    <view class="tpl-tooltip" style="{{isBottom?'top:auto;bottom:0;':''}}">
+        <text class="tpl-tooltip-text">{{content}}</text> <view bindtap="tooltipClose" class="tpl-tooltip-close"></view>
+    </view>
+</template>

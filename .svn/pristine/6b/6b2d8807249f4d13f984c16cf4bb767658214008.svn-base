@@ -1,0 +1,5 @@
+<template name="toast">
+    <view class="tpl-toast{{isMask?' tpl-toast-mask':''}}">
+        <text class="tpl-toast-text"> {{content}} </text>
+    </view>
+</template>

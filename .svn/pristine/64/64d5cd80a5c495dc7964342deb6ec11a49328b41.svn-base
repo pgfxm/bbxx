@@ -1,0 +1,13 @@
+<view class="container">
+    <view class="code-wrap">
+        <view class="code-name">验证码</view>
+        <input class="code-input" type="number" placeholder="输入验证码" bindinput="codeInput" auto-focus="true" placeholder-style="color:#cacaca"/>
+        <view class="reget-code" bindtap="regetCode">{{regetCodeText}}</view>
+    </view>
+
+    <button class="code-submit" bindtap="codeSubmit" type="primary" loading="{{codeSubmitLoading}}" disabled="{{codeSubmitLoading}}">确定</button>
+    
+    <view class="right-tip">
+        <text bindtap="noneGetCode">收不到验证码</text>
+    </view>
+</view>

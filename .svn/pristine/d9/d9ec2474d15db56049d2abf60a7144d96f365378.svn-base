@@ -1,0 +1,18 @@
+var mod = {
+    checkPrice: function(price){
+        if(!/^\d+(\.\d*)?$/.test(price)){
+            return false;
+        }
+        
+        return true;
+    },
+    
+    checkNum: function(num){
+        if(!/^\d+$/.test(num)){
+            return false;
+        }
+
+        return true;
+    }
+}
+module.exports = mod;

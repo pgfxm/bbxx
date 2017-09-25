@@ -1,0 +1,24 @@
+<view class="container">
+    <view wx:if="{{!countryCodeList.length}}" class="country-wrap-loading">
+        正在加载 国家区号...
+    </view>
+    
+    <block wx:if="{{countryCodeList.length}}">
+        <picker value="{{defaultSelectCountry}}" range="{{countryCodeList}}" bindchange="changeCountry">
+                <view class="country-wrap">
+                    <view class="country-code">+{{code}}</view>
+                    <view class="country-name">{{codeDes}}</view>
+                </view>
+        </picker>
+    </block>
+    
+    <view class="tele-wrap">
+        <view class="tele-name">手机号</view>
+        <input class="tele-input" type="number" placeholder="输入手机号" bindinput="teleInput" auto-focus="true" placeholder-style="color:#cacaca" value="{{telephone}}"/>
+    </view>
+
+    <button class="tele-submit" bindtap="teleSubmit" type="primary">下一步</button>
+
+    <view class="rules">已阅读并同意<navigator url="./regrule?type=agreement">《微店平台服务协议》</navigator>和<navigator url="./regrule?type=standard">《微店禁售商品管理规范》</navigator></view>
+
+</view>

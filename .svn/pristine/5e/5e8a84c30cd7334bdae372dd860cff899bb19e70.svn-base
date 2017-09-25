@@ -1,0 +1,52 @@
+.container{
+    padding:50rpx 40rpx 0;
+    display:block;
+    font-size:32rpx;
+}
+.code-wrap{
+    position: relative;
+    width:100%;
+    height:105rpx;
+    line-height:105rpx;
+    border-bottom:1px solid #ddd;
+    box-sizing:border-box;
+    padding:0 130rpx 0 150rpx;
+}
+.code-name{
+    position: absolute;
+    top:0;
+    left:0;
+    z-index:1;
+}
+.code-input{
+    width:100%;
+    height:105rpx;
+    line-height:105rpx;
+    box-sizing:border-box
+}
+.reget-code{
+    position: absolute;
+    top:33rpx;
+    right:0;
+    height:40rpx;
+    line-height:40rpx;
+    padding-left:30rpx;
+    padding-right:30rpx;
+    border-left:1px solid #ddd;
+    z-index:1112
+}
+.code-submit{
+    width:100%;
+    height:88rpx;
+    line-height:88rpx;
+    margin-top:60rpx;
+    background-color:#c60a1e !important;
+}
+.right-tip{
+    margin-top:30rpx;
+    height:24rpx;
+    line-height:24rpx;
+    font-size:24rpx;
+    color:#4384d8;
+    text-align: right;
+}

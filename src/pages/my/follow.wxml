@@ -1,0 +1,17 @@
+<view class="container">
+  <block wx:if="{{total}}">
+  <view class="container-title">
+    你共有{{total}}个粉丝
+  </view>
+  <view class="cantainer-rows">
+  <view wx:for="{{list}}" wx:key="id" class="container-row">
+    <navigator open-type="redirect" url="./list?userid={{item.id}}" hover-class="navigator-hover">
+    <image mode="widthFix" class="my-icon" src="{{item.img}}"></image><text class="container-row-txt">{{item.name}}</text><image mode="widthFix" class="my-icon-arrow" src="../../images/arrow_left.png"></image>
+    </navigator>
+  </view>
+  </view>
+  </block>
+  <block wx:if="{{errMsg}}">
+    <view class="container-list-empty">{{errMsg}}</view>
+  </block>
+</view>

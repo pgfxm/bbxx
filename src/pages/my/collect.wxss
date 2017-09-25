@@ -1,0 +1,47 @@
+page{
+  background: #e4e4e4;
+}
+.container{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:auto;
+  padding-bottom: 70rpx;
+  text-align: center;
+}
+.container-title{
+  height: 90rpx;
+  line-height: 90rpx;
+  font-size: 34rpx;
+  padding: 0 20rpx;
+  margin-bottom: 20rpx;
+  text-align: left;
+  background: #fff;
+}
+.cantainer-rows{
+  overflow: hidden;
+  padding: 0 20rpx;
+  background: #fff;
+}
+.container-row{
+  height: 190rpx;
+  line-height: 190rpx;
+  padding-left: 170rpx;
+  border-bottom: 1rpx solid #e4e4e4;
+  text-align: left;
+  position: relative;
+}
+.my-icon{
+  position: absolute;
+  width: 120rpx;
+  height: 120rpx;
+  top: 35rpx;
+  left: 15rpx;
+}
+.my-icon-arrow{
+  position: absolute;
+  top:80rpx;
+  right: 15rpx;
+  width: 27rpx;
+  height: 32rpx;
+}

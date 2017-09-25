@@ -1,0 +1,70 @@
+.container{
+    padding:50rpx 40rpx 0;
+    display:block;
+    font-size:32rpx;
+}
+.country-wrap,.tele-wrap,.country-wrap-loading{
+    position: relative;
+    width:100%;
+    height:105rpx;
+    line-height:105rpx;
+    border-bottom:1px solid #ddd;
+    box-sizing:border-box;
+}
+.tele-wrap{
+    padding-left:150rpx;
+}
+.country-wrap{
+    padding-top:30rpx;
+    padding-bottom:30rpx;
+    line-height:45rpx;
+}
+.country-wrap:after{
+    content:"";
+    position:absolute;
+    top:50%;
+    right:4rpx;
+    margin-top:-8rpx;
+    width:12rpx;
+    height:12rpx;
+    border-right:3px solid #c7c7cc;
+    border-bottom:3px solid #c7c7cc;
+    transform:rotate(-45deg)
+}
+.country-code,.country-name{
+    display:inline-block
+}
+.country-code{
+    padding-right:40rpx;
+    margin-right:40rpx;
+    border-right:1px solid #ddd;
+}
+
+.tele-name{
+    position: absolute;
+    top:0;
+    left:0;
+}
+.tele-input{
+    width:100%;
+    height:105rpx;
+    line-height:105rpx;
+    box-sizing:border-box
+}
+.tele-submit{
+    width:100%;
+    height:88rpx;
+    line-height:88rpx;
+    margin-top:60rpx;
+    background-color:#c60a1e !important;
+}
+.rules{
+    margin-top:30rpx;
+    font-size:24rpx;
+    color:#8c8c8b;
+    line-height:30rpx;
+}
+.rules navigator{
+    color:blue;
+    display:inline-block
+}

@@ -1,0 +1,32 @@
+$tooltipTextAlign:  left    !default;
+$tooltipPadding:    0 30rpx !default;
+.tpl-tooltip{
+  @include fixed();
+  z-index: $zIndexPopup;
+  height: $rowHeight;
+  background: $colorTextOverlay;
+  font-size: 28rpx;
+  text-align: $tooltipTextAlign;
+  padding: $tooltipPadding;
+  color: #fff;
+}
+.tpl-tooltip-text{
+  line-height: $rowHeight;
+  display: inline-block;
+}
+.tpl-tooltip-close{
+  @include center-translate(y);
+  right: 10rpx;
+  overflow: hidden;
+  &::before{
+    content: '';
+    @include v-arrow(right, 1rpx, 20rpx);
+    float: left;
+    margin-right: 7rpx;
+  }
+  &::after{
+    content: '';
+    @include v-arrow(left, 1rpx, 20rpx);
+    float: right;
+  }
+}

@@ -1,0 +1,16 @@
+@mixin icon-close-x($width: 15rpx, $height: 15rpx, $color: #fff) {
+    position: relative;
+    display: block;
+    width: $width;
+    height: $height;
+
+    &::after,&::before{
+        content: '';
+        position: absolute;
+        left:0;
+        right:0;
+        top:0;
+        bottom:0;
+
+    }
+}
