@@ -11,7 +11,6 @@
 - style 公用sass，包括base(sass基础库)和widget(可复用的小部件）
 - pages 各相应页面对应文件
 - modules 比较独立的一些模块
-- lib、vdian买家购买相关的模块和用到库、是复用杭州的
 
 ## 项目构建相关：
 
