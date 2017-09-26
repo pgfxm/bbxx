@@ -4,6 +4,7 @@ public/script
 node_modules
 .idea/
 .vscode
+.svn
 dist/
 tmp/
 config.yaml

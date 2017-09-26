@@ -1,20 +1,35 @@
 <view class="login-container">
-  <form bindsubmit="formSubmit">
     <view>
-      <input class="input" name="email" placeholder="邮箱 / 手机号" placeholder-class="input-placeholder" />
+      <input bindinput="updateData" data-key="username" class="input" placeholder="邮箱 / 手机号" placeholder-class="input-placeholder" />
     </view>
     <view>
-      <input class="input" name="password" placeholder="请输入密码" placeholder-class="input-placeholder" password="true" />
+      <input bindinput="updateData" data-key="password" type="password" class="input" placeholder="请输入密码" placeholder-class="input-placeholder" password="true" />
     </view>
+  <view>
+    <input bindinput="updateData" data-key="rpassword" class="input" placeholder="请确认输入密码" placeholder-class="input-placeholder" password="true" />
+  </view>
     <view>
-      <input class="input" name="comfirmPassword" placeholder="请确认输入密码" placeholder-class="input-placeholder" password="true" />
+    <view class="wrap-title">上传头像：</view>
+    <view class="wrap-content">
+
+      <!--循环体-->
+      <view class="wrap-single-img" wx:if="{{img}}">
+        <view class="wrap-thumbimg">
+          <image binderror="imageLoadErr" mode="scaleToFill" class="wrap-thumbimg-image" src="{{img}}" bindtap="previewImg" data-url="{{img}}" data-index="{{index}}"></image>
+        </view>
+      </view>
+
+      <view class="wrap-single-img" bindtap="addImg">
+        <view class="wrap-thumbimg">
+          <view class="wrap-upload-bt"></view>
+        </view>
+      </view>
     </view>
+    </view>
+
     <view>
-      <button formType="submit" size="mini" plain="true" class="login-btn"
-        hover-class="other-button-hover" hover-class="btn-hover"> 注册 </button>
+      <button bindtap="doReg" formType="submit" size="mini" plain="true" class="login-btn" hover-class="other-button-hover" hover-class="btn-hover"> 注册 </button>
     </view>
-    <!-- <view>
-      <navigator url="/pages/register/register" redirect class="register">30秒快速注册</navigator>
-    </view> -->
-  </form>
 </view>
+  <import src="../../template/toast/index.wxml"/>
+  <template wx:if="{{toast.show}}" is="toast" data="{{...toast}}"/>

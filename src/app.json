@@ -29,18 +29,18 @@
     "list": [{
       "pagePath": "pages/index/index",
       "text": "首页",
-      "selectedIconPath": "/images/home.png",
-      "iconPath": "/images/home.png"
+      "selectedIconPath": "images/home.png",
+      "iconPath": "images/home.png"
     }, {
       "pagePath": "pages/upload/index",
       "text": "上传",
-      "selectedIconPath": "/images/add.png",
-      "iconPath": "/images/add.png"
+      "selectedIconPath": "images/add.png",
+      "iconPath": "images/add.png"
     }, {
       "pagePath": "pages/my/index",
       "text": "我的",
-      "selectedIconPath": "/images/my.png",
-      "iconPath": "/images/my.png"
+      "selectedIconPath": "images/my.png",
+      "iconPath": "images/my.png"
     }]
   },
   "weweb": {
