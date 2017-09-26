@@ -1,7 +1,7 @@
 {
   "name": "bbxx",
   "description": "",
-  "author": "观发 彭 <pengguanfa@weidian.com>",
+  "author": "<pengguanfa@weidian.com>",
   "scripts": {
     "dev": "gulp",
     "build": "gulp build",

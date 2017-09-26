@@ -24,6 +24,24 @@ Page({
     this.scopeData[key] = e.detail.value.replace(/^\s+|\s+$/,'') || '';
   },
 
+  copyUrl: function () {
+    var url = 'https://wxshow.vipsinaapp.com/bbxx/';
+    wx.setClipboardData({
+      data: url,
+      success: function(res) {
+        wx.getClipboardData({
+          success: function(res) {
+            wx.showToast({
+              title: '复制地址成功',
+              icon: 'success',
+              duration: 2000
+            })
+          }
+        })
+      }
+    })
+  },
+
   setPwd:function(e) {
     var self = this;
     if(!this.scopeData.password){

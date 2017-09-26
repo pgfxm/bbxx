@@ -1,5 +1,5 @@
 <view class="login-container">
-    <view class="container-title">
+    <view class="container-title" bindtap="copyUrl">
      设置密码后可以通过https://wxshow.vipsinaapp.com/bbxx/这个地址访问
     </view>
     <view>
