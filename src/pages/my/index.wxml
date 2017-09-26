@@ -5,6 +5,7 @@
     <view class="container-userinfo-content">
       <text class="container-userinfo-name">{{userInfo.nickName}}</text>
     </view>
+    <button bindtap="setPwd" class="userinfo-follow">设置密码</button>
   </view>
   <view class="cantainer-rows">
   <view class="container-row">

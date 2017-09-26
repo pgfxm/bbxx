@@ -29,5 +29,10 @@ Page({
         userInfo: userInfo
       });
     }
+  },
+  setPwd: function (e) {
+    wx.navigateTo({
+      url: '/pages/my/setpwd'
+    })
   }
 });

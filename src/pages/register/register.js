@@ -21,7 +21,7 @@ Page({
 
   updateData: function (e) {
     var key = e.currentTarget.dataset.key;
-    this.scopeData[key] = e.detail.value || '';
+    this.scopeData[key] = e.detail.value.replace(/^\s+|\s+$/,'') || '';
   },
 
   addImg : function() {

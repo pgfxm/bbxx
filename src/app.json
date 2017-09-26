@@ -6,6 +6,7 @@
     "pages/my/list",
     "pages/my/follow",
     "pages/my/collect",
+    "pages/my/setpwd",
     "pages/login/login",
     "pages/upload/index",
     "pages/register/register"

@@ -72,3 +72,12 @@ button[plain]{
   width: 27rpx;
   height: 32rpx;
 }
+.userinfo-follow{
+  width:200rpx;
+  position:absolute;
+  top:50rpx;
+  right:12px;
+  height:75rpx;
+  line-height: 75rpx;
+  font-size: 34rpx;
+}

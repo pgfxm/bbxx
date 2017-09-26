@@ -1,7 +1,13 @@
 .login-container {
   padding: 20px;
 }
-
+.container-title{
+  font-size: 32rpx;
+  line-height: 38rpx;
+  padding: 10rpx;
+  color: #979797;
+  text-align: center;
+}
 .input {
   border: 1px solid #ddd;
   font-size: 32rpx;

@@ -23,8 +23,18 @@ var login = {
     },
 
     getUserInfo: function(){
-        if(!userLoginInfo.id){
-            userLoginInfo = wx.getStorageSync(storageKey);
+        if(userLoginInfo){
+            if(!userLoginInfo.id){
+              //userLoginInfo = wx.getStorageSync(storageKey);
+              wx.getStorage({
+                key: storageKey,
+                success: function(res) {
+                  userLoginInfo = res.data || {};
+                }
+              });
+            }
+        }else{
+          userLoginInfo = {};
         }
         return userLoginInfo;
     },
@@ -127,7 +137,7 @@ var login = {
     
     doLogout: function(isBack,logoutCallback){
         //退出登录 应该清除掉所有缓存信息
-        wx.clearStorageSync();
+        wx.clearStorage();
         util.resetUserInfo();
         userLoginInfo = {};
         app.globalData.userInfo = {};
